@@ -1,0 +1,15 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "First backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git \"https://github.com/Md-Naseer-uddin/Practice-code.git\""
+  },
+  "author": "Naseer",
+  "license": "ISC"
+}
