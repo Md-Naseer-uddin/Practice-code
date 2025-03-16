@@ -11,5 +11,9 @@
     "url": "git \"https://github.com/Md-Naseer-uddin/Practice-code.git\""
   },
   "author": "Naseer",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  }
 }
