@@ -22,14 +22,21 @@ const getBooks = (req, res) => {
 
 const getBook = (req, res) => {
     let id = req.params.id
-    let a = false
-    books.forEach((val) => {
-        if (val.id == id) {
-            res.status(200).json(val)
-            a = true
-        }
-    })
-    if (!a) {
+    // let a = false
+    // books.forEach((val) => {
+    //     if (val.id == id) {
+    //         res.status(200).json(val)
+    //         a = true
+    //     }
+    // })
+    // if (!a) {
+    //     res.status(404).send("Book not found")
+    // }
+    let book=books.find((val)=>val.id==id)
+    if(book){
+        res.status(200).json(book)
+    }
+    else{
         res.status(404).send("Book not found")
     }
 }
@@ -41,7 +48,7 @@ const createBook=(req,res)=>{
         ...req.body
     }
     books.push(newBook)
-    res.status(200).json(books)
+    res.status(201).json(books)
 }
 
 const deleteBook = (req, res) => {
@@ -86,5 +93,5 @@ module.exports = {
     deleteBook,
     putUpdate,
     patchUpdate,
-    createBook
+    createBook,
 }
