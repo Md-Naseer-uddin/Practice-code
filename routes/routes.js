@@ -1,11 +1,11 @@
-const express=require("express")
+const express = require("express")
 
-const bookRoutes=require("./bookRoutes")
-const productRoutes=require("./productRoutes")
+const bookRoutes = require("./bookRoutes")
+const productRoutes = require("./productRoutes")
 
-const router=express.Router()
+const router = express.Router()
 
-router.use("/books",bookRoutes)
-router.use("/products",productRoutes)
+router.use("/books", bookRoutes)
+router.use("/products", productRoutes)
 
-module.exports=router
+module.exports = router
